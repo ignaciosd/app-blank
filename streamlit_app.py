@@ -25,27 +25,26 @@ if img_file_buffer is not None:
     # To convert PIL Image to numpy array:
     img_array = np.array(img)
 
-    # Check the type of img_array:
-    # Should output: <class 'numpy.ndarray'>
-    st.write(type(img_array))
-
     # Check the shape of img_array:
     # Should output shape: (height, width, channels)
     st.write(img_array.shape)
     st.balloons()
 
     import streamlit as st
-    progress_text = "Operation in progress. Please wait."
+    progress_text = "Calculating Awesomeness..."
     my_bar = st.progress(0, text=progress_text)
 
     for percent_complete in range(100):
         time.sleep(0.01)
         my_bar.progress(percent_complete + 1, text=progress_text)
     time.sleep(1)
-    my_bar.empty()
+    my_bar.progress(percent_complete + 1, text="AWESOMENESS level -> 100%")
+    #my_bar.empty()
     st.snow()
     #st.button("Rerun")
 
-
+    # Check the type of img_array:
+    # Should output: <class 'numpy.ndarray'>
+    st.write(type(img_array))
 
 
