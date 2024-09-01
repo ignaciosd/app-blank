@@ -31,4 +31,8 @@ if img_file_buffer is not None:
     # Check the shape of img_array:
     # Should output shape: (height, width, channels)
     st.write(img_array.shape)
+    st.balloons()
+
+
+
 
