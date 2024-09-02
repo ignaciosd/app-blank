@@ -60,6 +60,7 @@ code = '''def hello():
     print("Hello, Streamlit!")'''
 st.code(code, language="python")    
 
-
+# SOUND
+st.audio("thp-reagan-bomb-russia.mp3", format="audio/mpeg", loop=True, autoplay=True)
 
 
