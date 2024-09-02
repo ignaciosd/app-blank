@@ -45,6 +45,21 @@ if img_file_buffer is not None:
 
     # Check the type of img_array:
     # Should output: <class 'numpy.ndarray'>
-    st.write(type(img_array))
+    #st.write(type(img_array))
+    
+
+# LATEX
+st.latex(r'''
+    a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+    \sum_{k=0}^{n-1} ar^k =
+    a \left(\frac{1-r^{n}}{1-r}\right)
+    ''')
+
+# CODE
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language="python")    
+
+
 
 
