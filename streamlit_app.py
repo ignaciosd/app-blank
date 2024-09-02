@@ -62,3 +62,27 @@ st.code(code, language="python")
 
 # SOUND
 st.audio("thp-reagan-bomb-russia.mp3", format="audio/mpeg", loop=True, autoplay=True)
+
+
+# SOUND V2
+import base64
+def autoplay_audio(file_path: str):
+    with open(file_path, "rb") as f:
+        data = f.read()
+        b64 = base64.b64encode(data).decode()
+        md = f"""
+            <audio controls autoplay="true">
+            <audio controls loop="true">
+            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+            </audio>
+            """
+        st.markdown(
+            md,
+            unsafe_allow_html=True,
+        )
+
+
+st.write("# Auto-playing Audio!")
+
+autoplay_audio("thp-reagan-bomb-russia.mp3")
+
