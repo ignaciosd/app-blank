@@ -1,3 +1,4 @@
 streamlit
 numpy
 time
+base64
