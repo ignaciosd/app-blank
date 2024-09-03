@@ -61,7 +61,7 @@ code = '''def hello():
 st.code(code, language="python")    
 
 # SOUND
-st.audio("thp-reagan-bomb-russia.mp3", format="audio/mpeg", loop=True, autoplay=True)
+st.audio("thp-jfk-space-clip.mp3", format="audio/mpeg", loop=True, autoplay=True)
 
 
 # SOUND V2
